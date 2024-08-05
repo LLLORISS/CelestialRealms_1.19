@@ -1,5 +1,6 @@
 package net.NarMoon.CelestialRealms;
 import com.mojang.logging.LogUtils;
+import net.NarMoon.CelestialRealms.Item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,6 +18,8 @@ public class CelestialRealms {
 
     public CelestialRealms() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
