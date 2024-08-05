@@ -1,5 +1,6 @@
 package net.NarMoon.CelestialRealms;
 import com.mojang.logging.LogUtils;
+import net.NarMoon.CelestialRealms.Block.BaseBlock;
 import net.NarMoon.CelestialRealms.Item.ModItems;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,6 +23,7 @@ public class CelestialRealms {
     public CelestialRealms() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        BaseBlock.BLOCKS.register(modEventBus);
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -29,14 +31,24 @@ public class CelestialRealms {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    public static final CreativeModeTab FOOD_TAB = new CreativeModeTab(MOD_ID) {
+    public static final CreativeModeTab FOOD_TAB = new CreativeModeTab("celestialrealms.food") {
         @Override
         public ItemStack makeIcon() {
             return ModItems.Tangerine.get().getDefaultInstance();
         }
     };
 
+    public static final CreativeModeTab BLOCKS_TAB = new CreativeModeTab("celestialrealms.blocks") {
+        @Override
+        public ItemStack makeIcon() {
+            return ModItems.RubyOre.get().getDefaultInstance();
+        }
+    };
+
     private void commonSetup(final FMLCommonSetupEvent event) {
+        LOGGER.info("Common setup for {} started", CelestialRealms.MOD_ID);
+
+        LOGGER.info("Common setup for {} finished", CelestialRealms.MOD_ID);
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

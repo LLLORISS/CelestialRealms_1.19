@@ -1,8 +1,10 @@
 package net.NarMoon.CelestialRealms.Item;
 
 
+import net.NarMoon.CelestialRealms.Block.BaseBlock;
 import net.NarMoon.CelestialRealms.CelestialRealms;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,4 +25,13 @@ public class ModItems {
                     .nutrition(3)
                     .saturationMod(0.2F)
                     .build()));
+
+    public static final RegistryObject<Item> GreenApple = ITEMS.register("green_apple",
+            () -> new EdibleItem(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationMod(0.3F)
+                    .build()));
+
+    public static final RegistryObject<BlockItem> RubyOre = ITEMS.register("ruby_ore",
+            () -> new BlockItem(BaseBlock.RubyOre.get(), new Item.Properties().tab(CelestialRealms.BLOCKS_TAB)));
 }
