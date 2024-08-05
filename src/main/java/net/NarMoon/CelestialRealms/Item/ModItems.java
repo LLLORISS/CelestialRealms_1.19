@@ -17,6 +17,6 @@ public class ModItems {
         ITEMS.register(eventBus);
     }
 
-    public static final RegistryObject<Item> Mandarin = ITEMS.register("mandarin",
-            ()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> Tangerine = ITEMS.register("tangerine",
+            ()-> new Item(new Item.Properties().tab(CelestialRealms.FOOD_TAB)));
 }

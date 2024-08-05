@@ -1,6 +1,9 @@
 package net.NarMoon.CelestialRealms;
 import com.mojang.logging.LogUtils;
 import net.NarMoon.CelestialRealms.Item.ModItems;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -26,8 +29,14 @@ public class CelestialRealms {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    public static final CreativeModeTab FOOD_TAB = new CreativeModeTab(MOD_ID) {
+        @Override
+        public ItemStack makeIcon() {
+            return ModItems.Tangerine.get().getDefaultInstance();
+        }
+    };
 
+    private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
