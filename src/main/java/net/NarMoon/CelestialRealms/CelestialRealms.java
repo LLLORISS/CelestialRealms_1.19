@@ -2,7 +2,7 @@ package net.NarMoon.CelestialRealms;
 import com.mojang.logging.LogUtils;
 import net.NarMoon.CelestialRealms.Block.BaseBlock;
 import net.NarMoon.CelestialRealms.Item.ModItems;
-import net.minecraft.core.NonNullList;
+import net.NarMoon.CelestialRealms.Block.BaseBlock;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,7 +41,7 @@ public class CelestialRealms {
     public static final CreativeModeTab BLOCKS_TAB = new CreativeModeTab("celestialrealms.blocks") {
         @Override
         public ItemStack makeIcon() {
-            return ModItems.RubyOre.get().getDefaultInstance();
+            return BaseBlock.RubyOre.get().asItem().getDefaultInstance();
         }
     };
 

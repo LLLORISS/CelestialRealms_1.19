@@ -32,6 +32,4 @@ public class ModItems {
                     .saturationMod(0.3F)
                     .build()));
 
-    public static final RegistryObject<BlockItem> RubyOre = ITEMS.register("ruby_ore",
-            () -> new BlockItem(BaseBlock.RubyOre.get(), new Item.Properties().tab(CelestialRealms.BLOCKS_TAB)));
 }
