@@ -2,6 +2,7 @@ package net.NarMoon.CelestialRealms.Item;
 
 
 import net.NarMoon.CelestialRealms.CelestialRealms;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,5 +19,8 @@ public class ModItems {
     }
 
     public static final RegistryObject<Item> Tangerine = ITEMS.register("tangerine",
-            ()-> new Item(new Item.Properties().tab(CelestialRealms.FOOD_TAB)));
+            () -> new EdibleItem(new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationMod(0.2F)
+                    .build()));
 }
