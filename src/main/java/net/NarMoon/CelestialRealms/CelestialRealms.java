@@ -45,6 +45,13 @@ public class CelestialRealms {
         }
     };
 
+    public static final CreativeModeTab RES_TAB = new CreativeModeTab("celestialrealms.Resources") {
+        @Override
+        public ItemStack makeIcon() {
+            return ModItems.Ruby.get().getDefaultInstance();
+        }
+    };
+
     private void commonSetup(final FMLCommonSetupEvent event) {
         LOGGER.info("Common setup for {} started", CelestialRealms.MOD_ID);
 

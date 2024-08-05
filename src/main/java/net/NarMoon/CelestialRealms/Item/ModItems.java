@@ -8,9 +8,12 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.rmi.registry.Registry;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -32,4 +35,6 @@ public class ModItems {
                     .saturationMod(0.3F)
                     .build()));
 
+    public static final RegistryObject<Item> Ruby = ITEMS.register("ruby"
+            , () -> new Item((new Item.Properties().tab(CelestialRealms.RES_TAB))));
 }

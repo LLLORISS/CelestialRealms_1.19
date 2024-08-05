@@ -20,7 +20,8 @@ public class BaseBlock{
             , CelestialRealms.MOD_ID);
 
     public static final RegistryObject<Block> RubyOre = register("ruby_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).friction(0.5f))
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.0F, 15.0F).requiresCorrectToolForDrops())
             , new Item.Properties().tab(CelestialRealms.BLOCKS_TAB));
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier
