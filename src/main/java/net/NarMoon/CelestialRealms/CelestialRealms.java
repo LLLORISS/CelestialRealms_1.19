@@ -1,5 +1,4 @@
 package net.NarMoon.CelestialRealms;
-
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
