@@ -28,8 +28,6 @@ public class ModItems {
         ITEMS.register(eventBus);
     }
 
-
-
     public static class CustomTiers {
         public static final Tier RUBY_TIER = new ForgeTier(
                 2,

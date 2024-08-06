@@ -9,6 +9,6 @@
   "itemGroup.celestialrealms.Weapons": "Weapons",
   "itemGroup.celestialrealms.Resources": "Resources",
   "itemGroup.celestialrealms.Tools": "Tools",
-  "block.celestialrealms.ruby_ore": "Ruby Ore"
-
+  "block.celestialrealms.ruby_ore": "Ruby Ore",
+  "block.celestialrealms.ruby_block": "Ruby Block"
 }

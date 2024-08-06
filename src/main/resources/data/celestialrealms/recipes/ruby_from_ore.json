@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "ingredient": {
-    "item": "celestialrealms:ruby_ore"
+  "item": "celestialrealms:ruby_ore"
   },
   "result": "celestialrealms:ruby",
   "experience": 0.7,

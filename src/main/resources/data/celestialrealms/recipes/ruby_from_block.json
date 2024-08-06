@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "group": "default",
+    "ingredients": [
+      {
+        "item": "celestialrealms:ruby_block"
+      }
+    ],
+    "result": {
+      "item": "celestialrealms:ruby",
+      "count": 9
+    }
+  }

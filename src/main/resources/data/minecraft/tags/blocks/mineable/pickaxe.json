@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "celestialrealms:ruby_ore"
+    "celestialrealms:ruby_ore",
+    "celestialrealms:ruby_block"
   ]
 }
