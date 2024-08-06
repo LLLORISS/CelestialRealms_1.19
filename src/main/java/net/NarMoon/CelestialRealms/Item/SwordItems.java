@@ -10,11 +10,8 @@ import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
-
-import static net.NarMoon.CelestialRealms.Item.ModItems.ITEMS;
 
 public class SwordItems extends SwordItem{
     public SwordItems(Tier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
@@ -51,18 +48,4 @@ public class SwordItems extends SwordItem{
             return new SwordItems(tier, attackDamageModifier, attackSpeedModifier, properties);
         }
     }
-
-    public static class CustomTiers{
-        public static final Tier RUBY_TIER = TierSortingRegistry.registerTier(new ForgeTier(
-                2,
-                500,
-                7.0F,
-                3.0F,
-                15,
-                BlockTags.NEEDS_IRON_TOOL,
-                () -> Ingredient.of(ModItems.Ruby.get())),
-                new ResourceLocation(CelestialRealms.MOD_ID, "ruby"),
-                List.of(Tiers.IRON),
-                List.of());
-    };
 }

@@ -3,10 +3,12 @@
   "item.celestialrealms.green_apple": "Green Apple",
   "item.celestialrealms.ruby": "Ruby",
   "item.celestialrealms.ruby_sword": "Ruby Sword",
+  "item.celestialrealms.ruby_pickaxe": "Ruby Pickaxe",
   "itemGroup.celestialrealms.food": "Celestial Food",
   "itemGroup.celestialrealms.blocks": "Celestial Blocks",
   "itemGroup.celestialrealms.Weapons": "Weapons",
   "itemGroup.celestialrealms.Resources": "Resources",
+  "itemGroup.celestialrealms.Tools": "Tools",
   "block.celestialrealms.ruby_ore": "Ruby Ore"
 
 }

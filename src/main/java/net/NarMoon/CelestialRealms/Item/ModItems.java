@@ -2,13 +2,23 @@ package net.NarMoon.CelestialRealms.Item;
 
 
 import net.NarMoon.CelestialRealms.CelestialRealms;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.rmi.registry.Registry;
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -16,6 +26,20 @@ public class ModItems {
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
+    }
+
+
+
+    public static class CustomTiers {
+        public static final Tier RUBY_TIER = new ForgeTier(
+                2,
+                500,
+                1.3F,
+                3.0F,
+                15,
+                BlockTags.NEEDS_IRON_TOOL,
+                () -> Ingredient.of(ModItems.Ruby.get())
+        );
     }
 
     public static final RegistryObject<Item> Tangerine = ITEMS.register("tangerine",
@@ -35,8 +59,15 @@ public class ModItems {
 
     public static final RegistryObject<SwordItems> RUBY_SWORD = ITEMS.register("ruby_sword",
             () -> new SwordItems.Builder()
-                    .setTier(SwordItems.CustomTiers.RUBY_TIER)
+                    .setTier(CustomTiers.RUBY_TIER)
                     .setAttackDamageModifier(3)
                     .setAttackSpeedModifier(1.2F)
+                    .build());
+
+    public static final RegistryObject<PickaxeItems> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe",
+            ()->new PickaxeItems.Builder()
+                    .setTier(CustomTiers.RUBY_TIER)
+                    .setAttackDamage(1)
+                    .setAttackSpeed(0F)
                     .build());
 }
