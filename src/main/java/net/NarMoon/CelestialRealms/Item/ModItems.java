@@ -1,19 +1,14 @@
 package net.NarMoon.CelestialRealms.Item;
 
 
-import net.NarMoon.CelestialRealms.Block.BaseBlock;
 import net.NarMoon.CelestialRealms.CelestialRealms;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.rmi.registry.Registry;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -37,4 +32,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> Ruby = ITEMS.register("ruby"
             , () -> new Item((new Item.Properties().tab(CelestialRealms.RES_TAB))));
+
+    public static final RegistryObject<SwordItems> RUBY_SWORD = ITEMS.register("ruby_sword",
+            () -> new SwordItems.Builder()
+                    .setTier(SwordItems.CustomTiers.RUBY_TIER)
+                    .setAttackDamageModifier(4)
+                    .setAttackSpeedModifier(1.4F)
+                    .build());
 }
