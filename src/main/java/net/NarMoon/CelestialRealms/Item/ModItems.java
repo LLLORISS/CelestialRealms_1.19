@@ -36,7 +36,7 @@ public class ModItems {
     public static final RegistryObject<SwordItems> RUBY_SWORD = ITEMS.register("ruby_sword",
             () -> new SwordItems.Builder()
                     .setTier(SwordItems.CustomTiers.RUBY_TIER)
-                    .setAttackDamageModifier(4)
-                    .setAttackSpeedModifier(1.4F)
+                    .setAttackDamageModifier(3)
+                    .setAttackSpeedModifier(1.2F)
                     .build());
 }
